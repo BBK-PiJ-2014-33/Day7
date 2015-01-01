@@ -41,6 +41,14 @@ public class Patient
         }
     }
 
+    public int getLength(Patient myPatient)
+    {
+        if (myPatient.nextPatient == null) {
+            return 1;
+        } else {
+            return getLength(myPatient.nextPatient) + 1;
+        }
+    }
     public void printList(Patient myPatient)
     {
         if(myPatient.nextPatient==null)
